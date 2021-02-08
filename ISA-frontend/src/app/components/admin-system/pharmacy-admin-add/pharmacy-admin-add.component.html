@@ -1,8 +1,8 @@
 <div class="container" style="padding-top: 4em;">
     <div class="card m-3">
-        <h5 class="card-header">Registration</h5>
+        <h5 class="card-header">Register pharmacy administrator</h5>
         <div class="card-body">
-            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <form [formGroup]="pharmacyAdminForm" (ngSubmit)="onSubmit()">
                 <div class="form-row">
                     <div class="form-group col">
                         <label>Name:</label>
@@ -59,7 +59,7 @@
                     <div class="form-group col">
                         <label>Email:</label>
                         <input type="email" formControlName="email" class="form-control"
-                            [ngClass]="{'is-invalid': submitted && f.email.errors}" />
+                            [ngClass]="{'is-invalid': submitted && f.email.errors}" placeholder="example@mail.com" />
                         <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
                             <div *ngIf="f.email.errors.required">Email is required.</div>
                             <div *ngIf="f.email.errors.email">Email must be a valid email address.</div>
@@ -93,10 +93,6 @@
                     <button class="btn btn-secondary" type="reset" (click)="onReset()">Cancel</button>
                 </div>
             </form>
-            <br>
-            <div class="text-center">
-                <label for="account">Already have an account? <a href="/login">Login here.</a></label>
-            </div>
         </div>
     </div>
 </div>

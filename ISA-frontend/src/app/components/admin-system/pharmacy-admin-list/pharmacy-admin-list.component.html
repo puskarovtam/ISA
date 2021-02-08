@@ -1,0 +1,29 @@
+<h3>List of all pharmacy administrators in the system</h3>
+<br>
+<br>
+<div class="container">
+    <button type="button" class="btn btn-success pull-right"><i class="fa fa-plus-circle"></i> Add new pharmacy administrator</button>
+    <br>
+    <br>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col" *ngFor='let pa of pharmacyAdminHeaders'>{{pa}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let phadmin of pharmacyAdmins'>
+                <td>{{phadmin.name}}</td>
+                <td>{{phadmin.surname}}</td>
+                <td>{{phadmin.address}}</td>
+                <td>{{phadmin.city}}</td>
+                <td>{{phadmin.country}}</td>
+                <td>{{phadmin.phone}}</td>
+                <td>{{phadmin.email}}</td>
+                <td>
+                    <button class="btn btn-danger"><i class="fa fa-trash"></i> Delete pharmacy administrator</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

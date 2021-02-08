@@ -3,18 +3,18 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MustMatch } from 'src/app/functions/must-match.validator';
 
 @Component({
-  selector: 'app-register',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css'],
+  selector: 'app-pharmacy-admin-add',
+  templateUrl: './pharmacy-admin-add.component.html',
+  styleUrls: ['./pharmacy-admin-add.component.css'],
 })
-export class RegisterComponent implements OnInit {
-  registerForm !: FormGroup;
+export class PharmacyAdminAddComponent implements OnInit {
+  pharmacyAdminForm!: FormGroup;
   submitted = false;
 
   constructor(private formBuilder: FormBuilder) {}
 
   ngOnInit(): void {
-    this.registerForm = this.formBuilder.group(
+    this.pharmacyAdminForm = this.formBuilder.group(
       {
         email: ['', [Validators.required, Validators.email]],
         password: ['', [Validators.required, Validators.minLength(6)]],
@@ -34,23 +34,20 @@ export class RegisterComponent implements OnInit {
 
   // convenience getter for easy access to form fields
   get f() {
-    return this.registerForm.controls;
+    return this.pharmacyAdminForm.controls;
   }
 
   onSubmit() {
     this.submitted = true;
 
     // stop here if form is invalid
-    if (this.registerForm.invalid) {
+    if (this.pharmacyAdminForm.invalid) {
       return;
     }
-
-    // display form values on success
-    alert('SUCCESS!! \n\n' + JSON.stringify(this.registerForm.value, null, 4));
   }
 
   onReset() {
     this.submitted = false;
-    this.registerForm.reset();
+    this.pharmacyAdminForm.reset();
   }
 }

@@ -3,18 +3,19 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MustMatch } from 'src/app/functions/must-match.validator';
 
 @Component({
-  selector: 'app-register',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css'],
+  selector: 'app-system-admin-add',
+  templateUrl: './system-admin-add.component.html',
+  styleUrls: ['./system-admin-add.component.css']
 })
-export class RegisterComponent implements OnInit {
-  registerForm !: FormGroup;
+export class SystemAdminAddComponent implements OnInit {
+
+  systemAdminForm!: FormGroup;
   submitted = false;
 
   constructor(private formBuilder: FormBuilder) {}
 
   ngOnInit(): void {
-    this.registerForm = this.formBuilder.group(
+    this.systemAdminForm = this.formBuilder.group(
       {
         email: ['', [Validators.required, Validators.email]],
         password: ['', [Validators.required, Validators.minLength(6)]],
@@ -34,23 +35,21 @@ export class RegisterComponent implements OnInit {
 
   // convenience getter for easy access to form fields
   get f() {
-    return this.registerForm.controls;
+    return this.systemAdminForm.controls;
   }
 
   onSubmit() {
     this.submitted = true;
 
     // stop here if form is invalid
-    if (this.registerForm.invalid) {
+    if (this.systemAdminForm.invalid) {
       return;
     }
-
-    // display form values on success
-    alert('SUCCESS!! \n\n' + JSON.stringify(this.registerForm.value, null, 4));
   }
 
   onReset() {
     this.submitted = false;
-    this.registerForm.reset();
+    this.systemAdminForm.reset();
   }
+
 }

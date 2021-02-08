@@ -1,0 +1,65 @@
+<br>
+<br>
+<div class="row">
+    <div class="col-lg-4 wrapper">
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h4>Pharmacy System Admin page</h4>
+            </div>
+            <ul class="list-unstyled components">
+                <li>
+                    <a href=""><i class="fa fa-user"></i> Profile</a>
+                </li>
+                <li>
+                    <a href="#pharmacySubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i
+                            class="fa fa-h-square"></i> Pharmacy</a>
+                    <ul class="collapse list-unstyled" id="pharmacySubmenu">
+                        <li>
+                            <a href="" [routerLink]="['./addPharmacy']"><i class="fa fa-plus-circle"></i> Add
+                                pharmacy</a>
+                        </li>
+                        <li>
+                            <a href="" [routerLink]="['./listPharmacy']"><i class="fa fa-list-ul"></i> List of all
+                                pharmacies</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pharmacyAdminSubmenu" data-toggle="collapse" aria-expanded="false"
+                        class="dropdown-toggle"><i class="fa fa-users"></i> Pharmacy administrators</a>
+                    <ul class="collapse list-unstyled" id="pharmacyAdminSubmenu">
+                        <li>
+                            <a href="" [routerLink]="['./addPharmacyAdmin']"><i class="fa fa-user-plus"></i> Register
+                                pharmacy administrator</a>
+                        </li>
+                        <li>
+                            <a href="" [routerLink]="['./listPharmacyAdmin']"><i class="fa fa-list-ul"></i> List of all
+                                pharmacies administrators</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#systemAdminSubmenu" data-toggle="collapse" aria-expanded="false"
+                        class="dropdown-toggle"><i class="fa fa-users"></i> System administrators</a>
+                    <ul class="collapse list-unstyled" id="systemAdminSubmenu">
+                        <li>
+                            <a href="" [routerLink]="['./addSystemAdmin']"><i class="fa fa-user-plus"></i> Register
+                                system administrator</a>
+                        </li>
+                        <li>
+                            <a href="" [routerLink]="['./listSystemAdmin']"><i class="fa fa-list-ul"></i> List of all
+                                systems administrators</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-medkit"></i> Medication codebook</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div id="col-lg-8 content">
+        <br>
+        <router-outlet></router-outlet>
+    </div>
+</div>
