@@ -15,6 +15,13 @@ import { PharmacyAdminListComponent } from './components/admin-system/pharmacy-a
 import { AdminSystemHomepageComponent } from './components/admin-system/admin-system-homepage/admin-system-homepage.component';
 import { SystemAdminAddComponent } from './components/admin-system/system-admin-add/system-admin-add.component';
 import { SystemAdminListComponent } from './components/admin-system/system-admin-list/system-admin-list.component';
+import { MedicationAddComponent } from './components/admin-system/medication-add/medication-add.component';
+import { MedicationListComponent } from './components/admin-system/medication-list/medication-list.component';
+import { AdminSystemProfileComponent } from './components/admin-system/admin-system-profile/admin-system-profile.component';
+import { AdminPharmacyHomepageComponent } from './components/admin-pharmacy/admin-pharmacy-homepage/admin-pharmacy-homepage.component';
+import { AdminPharmacyProfileComponent } from './components/admin-pharmacy/admin-pharmacy-profile/admin-pharmacy-profile.component';
+import { PharmacistAddComponent } from './components/admin-pharmacy/pharmacist-add/pharmacist-add.component';
+import { PharmacistListComponent } from './components/admin-pharmacy/pharmacist-list/pharmacist-list.component';
 
 
 @NgModule({
@@ -30,7 +37,14 @@ import { SystemAdminListComponent } from './components/admin-system/system-admin
     PharmacyAdminListComponent,
     AdminSystemHomepageComponent,
     SystemAdminAddComponent,
-    SystemAdminListComponent
+    SystemAdminListComponent,
+    MedicationAddComponent,
+    MedicationListComponent,
+    AdminSystemProfileComponent,
+    AdminPharmacyHomepageComponent,
+    AdminPharmacyProfileComponent,
+    PharmacistAddComponent,
+    PharmacistListComponent
   ],
   imports: [
     BrowserModule,

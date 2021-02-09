@@ -1,0 +1,29 @@
+<h2 style="text-align: center; padding-top: 1em;" >List of all pharmacists in the system</h2>
+<br>
+<br>
+<div class="container">
+    <button type="button" class="btn btn-success pull-right"><i class="fa fa-plus-circle"></i> Add new pharmacist</button>
+    <br>
+    <br>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col" *ngFor='let pa of pharmacistHeaders' style="text-align: center;">{{pa}}</th>
+            </tr>
+        </thead>
+        <tbody style="text-align: center;">
+            <tr *ngFor='let pharm of pharmacist'>
+                <td>{{pharm.name}}</td>
+                <td>{{pharm.surname}}</td>
+                <td>{{pharm.address}}</td>
+                <td>{{pharm.city}}</td>
+                <td>{{pharm.country}}</td>
+                <td>{{pharm.phone}}</td>
+                <td>{{pharm.email}}</td>
+                <td>
+                    <button class="btn btn-danger"><i class="fa fa-trash"></i> Delete pharmacist</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

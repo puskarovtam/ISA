@@ -1,0 +1,34 @@
+<br>
+<br>
+<div class="row">
+    <div class="col-lg-3 wrapper">
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h4>Pharmacy Admin page</h4>
+            </div>
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="" [routerLink]="['./profile']"><i class="fa fa-user"></i> Profile</a>
+                </li>
+                <li>
+                    <a href="#pharmacistSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i
+                            class="fa fa-user-md"></i> Pharmacist</a>
+                    <ul class="collapse list-unstyled" id="pharmacistSubmenu">
+                        <li>
+                            <a href="" [routerLink]="['./addPharmacist']"><i class="fa fa-plus-circle"></i> Add new
+                                pharmacist</a>
+                        </li>
+                        <li>
+                            <a href="" [routerLink]="['./listPharmacist']"><i class="fa fa-list-ul"></i> List of all
+                                pharmacists</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div id="content" class="col-lg-9">
+        <br>
+        <router-outlet></router-outlet>
+    </div>
+</div>

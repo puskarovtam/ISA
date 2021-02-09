@@ -1,0 +1,25 @@
+<h2 style="text-align: center; padding-top: 1em;">List of all medications in the system</h2>
+<br>
+<br>
+<div class="container">
+    <button type="button" class="btn btn-success pull-right"><i class="fa fa-plus-circle"></i> Add new medication</button>
+    <br>
+    <br>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col" *ngFor='let med of medicationHeaders' style="text-align: center;">{{med}}</th>
+            </tr>
+        </thead>
+        <tbody style="text-align: center;">
+            <tr *ngFor='let medication of medications'>
+                <td>{{medication.code}}</td>
+                <td>{{medication.name}}</td>
+                <td>
+                    <button class="btn btn-info"><i class="fa fa-pencil"></i> Edit medication</button>
+                    <button class="btn btn-danger"><i class="fa fa-trash"></i> Delete medication</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

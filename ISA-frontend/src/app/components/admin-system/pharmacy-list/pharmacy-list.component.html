@@ -1,17 +1,17 @@
-<h3>List of all pharmacies in the system</h3>
+<h2 style="text-align: center; padding-top: 1em;">List of all pharmacies in the system</h2>
 <br>
 <br>
 <div class="container">
     <button type="button" class="btn btn-success pull-right"><i class="fa fa-plus-circle"></i> Add new pharmacy</button>
     <br>
     <br>
-    <table class="table">
-        <thead>
+    <table class="table table-bordered">
+        <thead style="text-align: center;">
             <tr>
                 <th scope="col" *ngFor='let ph of pharmacyHeaders'>{{ph}}</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody style="text-align: center;">
             <tr *ngFor='let pharmacy of pharmacies'>
                 <td>{{pharmacy.name}}</td>
                 <td>{{pharmacy.address}}</td>

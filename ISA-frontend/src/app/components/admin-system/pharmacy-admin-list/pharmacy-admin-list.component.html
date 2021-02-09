@@ -1,17 +1,17 @@
-<h3>List of all pharmacy administrators in the system</h3>
+<h2 style="text-align: center; padding-top: 1em;">List of all pharmacy administrators in the system</h2>
 <br>
 <br>
 <div class="container">
     <button type="button" class="btn btn-success pull-right"><i class="fa fa-plus-circle"></i> Add new pharmacy administrator</button>
     <br>
     <br>
-    <table class="table">
+    <table class="table table-bordered">
         <thead>
             <tr>
-                <th scope="col" *ngFor='let pa of pharmacyAdminHeaders'>{{pa}}</th>
+                <th scope="col" *ngFor='let pa of pharmacyAdminHeaders' style="text-align: center;">{{pa}}</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody style="text-align: center;">
             <tr *ngFor='let phadmin of pharmacyAdmins'>
                 <td>{{phadmin.name}}</td>
                 <td>{{phadmin.surname}}</td>
